@@ -1,0 +1,20 @@
+"use client";
+
+export default function Home() {
+  async function handleCheckout() {
+    const res = await fetch("/api/checkout", { method: "POST" }); // <-- no /session
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert(data.error ?? "Something went wrong.");
+      return;
+    }
+    window.location.href = data.url; // redirect to Stripe
+  }
+
+  return (
+    <button onClick={handleCheckout} style={{ padding: "8px 20px", background: "blue", color: "white", borderRadius: 6 }}>
+      Pay Rent Now
+    </button>
+  );
+}

@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="bg-neutral-900 border-b border-neutral-700 text-neutral-100">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-sky-400">🏠 Rental Portal</h1>
+        <h1 className="text-xl font-bold text-sky-400">ðŸ  Rental Portal</h1>
         <div className="flex gap-3">
           {links.map(({ href, label }) => (
             <Link

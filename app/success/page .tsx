@@ -36,14 +36,14 @@ export default function Home() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Payment request failed');
 
-      setStatus(`✅ ${data.message} — received: ${JSON.stringify(data.received)}`);
+      setStatus(`âœ… ${data.message} â€” received: ${JSON.stringify(data.received)}`);
 
       // Clear some fields on success (keep amount if you prefer)
       setTenantName('');
       setUnitNumber('');
       // setAmount(0); // uncomment if you also want to reset amount
     } catch (err: any) {
-      setStatus(`❌ ${err.message || 'Something went wrong'}`);
+      setStatus(`âŒ ${err.message || 'Something went wrong'}`);
     } finally {
       setLoading(false);
     }
@@ -122,7 +122,7 @@ export default function Home() {
             onChange={(e) => setAmount(Math.max(1, Number(e.target.value)))}
             style={inputStyle}
           />
-          <small style={{ color: '#6b7280' }}>You’ll pay {fmt.format(amount)}</small>
+          <small style={{ color: '#6b7280' }}>Youâ€™ll pay {fmt.format(amount)}</small>
 
           <hr style={{ border: 0, borderTop: '1px solid #eee', marginTop: 16, marginBottom: 12 }} />
 
@@ -142,7 +142,7 @@ export default function Home() {
               transition: 'background 0.2s ease',
             }}
           >
-            {loading ? 'Processing…' : 'Pay Rent Now'}
+            {loading ? 'Processingâ€¦' : 'Pay Rent Now'}
           </button>
         </form>
 
@@ -151,7 +151,7 @@ export default function Home() {
             style={{
               marginTop: 16,
               fontSize: 14,
-              color: status.startsWith('✅') ? 'green' : 'red',
+              color: status.startsWith('âœ…') ? 'green' : 'red',
               whiteSpace: 'pre-wrap',
             }}
           >

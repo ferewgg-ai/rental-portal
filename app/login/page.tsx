@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState, type CSSProperties } from 'react';
 
-// 🔹 Edit these brand colors to your liking
+// ðŸ”¹ Edit these brand colors to your liking
 const brand = {
   primary: '#2563eb',      // button & accents
   primaryDark: '#1e40af',  // button hover
@@ -56,7 +56,7 @@ export default function LoginPage() {
               type="password"
               value={pwd}
               onChange={(e) => setPwd(e.target.value)}
-              placeholder="••••••••"
+              placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
               style={input}
             />
 
@@ -74,7 +74,7 @@ export default function LoginPage() {
               onMouseOver={(e) => { if (canSubmit) (e.currentTarget.style.background = brand.primaryDark); }}
               onMouseOut={(e) => { if (canSubmit) (e.currentTarget.style.background = brand.primary); }}
             >
-              {loading ? 'Signing in…' : 'Sign in'}
+              {loading ? 'Signing inâ€¦' : 'Sign in'}
             </button>
           </form>
 

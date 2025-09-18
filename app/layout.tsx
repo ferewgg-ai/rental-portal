@@ -29,10 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-neutral-100`}
       >
-        {/* ✅ Shared Navbar across all pages */}
+        {/* âœ… Shared Navbar across all pages */}
         <Navbar />
 
-        {/* ✅ Page-specific content */}
+        {/* âœ… Page-specific content */}
         <main className="p-6">{children}</main>
       </body>
     </html>

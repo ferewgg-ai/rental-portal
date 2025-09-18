@@ -1,4 +1,4 @@
-"use client";
+﻿﻿"use client";
 
 import { useState } from "react";
 
@@ -23,7 +23,7 @@ export default function LeasePage() {
       <h1 className="text-2xl font-bold mb-4">?? Lease Documents</h1>
       <ul className="space-y-4">
         <li className="p-4 rounded-lg bg-neutral-800">
-          <p className="font-semibold">Current Lease (2023�2025)</p>
+          <p className="font-semibold">Current Lease (2023�2025)</p>
           <a href="/lease/current.pdf" className="text-sky-400 hover:underline">Download PDF</a>
         </li>
         <li className="p-4 rounded-lg bg-neutral-800">
@@ -43,3 +43,5 @@ export default function LeasePage() {
     </main>
   );
 }
+
+

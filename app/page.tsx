@@ -1,8 +1,7 @@
-﻿export default function Home() {
+﻿export default function HomePage() {
   return (
-    <main style={{ padding: 24 }}>
-      <h1 style={{ margin: 0 }}>Hello from Rental Portal</h1>
-      <p>Build pipeline sanity check page.</p>
+    <main>
+      <h1>Welcome to Rental Portal</h1>
     </main>
   );
 }

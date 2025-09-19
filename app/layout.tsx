@@ -1,25 +1,22 @@
-﻿import Navbar from "@/components/Navbar";
-import './globals.css';
-export const metadata = { title: "Rental Portal" };
-
+﻿import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-export default function RootLayout({ children }) {
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Rental Portal",
+  description: "Tenant portal for rent, lease, and maintenance",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head />
-      <body style={{ margin: 0, padding: 0 }}>
-        ({children}) {
-  return (
-    <html lang="en">
-      <body>
+      <body className={inter.className}>
         <Navbar />
         {children}
       </body>
     </html>
   );
 }
-      </body>
-    </html>
-  );
-}
-

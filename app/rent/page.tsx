@@ -1,1 +1,7 @@
-﻿export default function Page() { return <main />; }
+﻿export default function RentPage() {
+  return (
+    <main>
+      <h1>Pay Rent</h1>
+    </main>
+  );
+}

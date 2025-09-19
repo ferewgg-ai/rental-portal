@@ -1,1 +1,7 @@
-﻿export default function Page() { return <main />; }
+﻿export default function MaintenancePage() {
+  return (
+    <main>
+      <h1>Maintenance Requests</h1>
+    </main>
+  );
+}

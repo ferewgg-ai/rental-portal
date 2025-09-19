@@ -1,7 +1,3 @@
-﻿export default function CancelPage() {
-  return (
-    <main>
-      <h1>Payment Cancelled</h1>
-    </main>
-  );
+export default function Page() {
+  return <h1>Cancel Page</h1>;
 }

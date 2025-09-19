@@ -1,7 +1,3 @@
-﻿export default function SuccessPage() {
-  return (
-    <main>
-      <h1>Payment Successful</h1>
-    </main>
-  );
+export default function Page() {
+  return <h1>Success Page</h1>;
 }

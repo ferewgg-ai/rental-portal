@@ -1,7 +1,3 @@
-﻿export default function AdminPage() {
-  return (
-    <main>
-      <h1>Admin Dashboard</h1>
-    </main>
-  );
+export default function Page() {
+  return <h1>Admin Page</h1>;
 }

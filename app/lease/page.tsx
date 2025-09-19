@@ -1,7 +1,3 @@
-﻿export default function LeasePage() {
-  return (
-    <main>
-      <h1>Lease Information</h1>
-    </main>
-  );
+export default function Page() {
+  return <h1>Lease Page</h1>;
 }

@@ -1,5 +1,13 @@
-﻿{
-    "extends":  [
-                    "next/core-web-vitals"
-                ]
+{
+  "extends": ["next/core-web-vitals"],
+  "overrides": [
+    {
+      "files": ["app/**/page.@(tsx|jsx|js)"],
+      "rules": {
+        "import/no-default-export": "off",
+        "import/no-named-export": "off",
+        "import/prefer-default-export": "error"
+      }
+    }
+  ]
 }

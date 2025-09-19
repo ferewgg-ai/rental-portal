@@ -1,4 +1,5 @@
-﻿import "./globals.css";
+﻿import React from "react";
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
@@ -10,7 +11,11 @@ export const metadata: Metadata = {
   description: "Tenant portal for rent, lease, and maintenance",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>

@@ -27,11 +27,15 @@ export default function UploadForm() {
 
   return (
     <form onSubmit={handleUpload} className="space-y-4 max-w-md">
-      <input type="text" name="title" placeholder="Vacancy Title" required className="border p-2 w-full" />
+      <input type="text" name="title" placeholder="Property Title" required className="border p-2 w-full" />
       <input type="text" name="rent" placeholder="Monthly Rent" required className="border p-2 w-full" />
       <input type="text" name="address" placeholder="Address" required className="border p-2 w-full" />
+      <input type="number" name="bedrooms" placeholder="Bedrooms" required className="border p-2 w-full" />
+      <input type="number" step="0.5" name="bathrooms" placeholder="Bathrooms" required className="border p-2 w-full" />
+      <input type="text" name="squareFootage" placeholder="Square Footage" required className="border p-2 w-full" />
+      <input type="text" name="amenities" placeholder="Amenities (comma-separated)" required className="border p-2 w-full" />
       <textarea name="description" placeholder="Description" required className="border p-2 w-full"></textarea>
-      <input type="file" name="file" required className="border p-2 w-full" />
+      <input type="file" name="file" className="border p-2 w-full" />
       <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded">
         Upload Vacancy
       </button>

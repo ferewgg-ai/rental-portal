@@ -1,40 +1,14 @@
-import "./globals.css";
-import Navbar from "../components/Navbar";
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+﻿import './globals.css';
+export const metadata = { title: "Rental Portal" };
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Rental Property Portal",
-  description: "State-of-the-art rental management app",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-neutral-100`}
-      >
-        {/* âœ… Shared Navbar across all pages */}
-        <Navbar />
-
-        {/* âœ… Page-specific content */}
-        <main className="p-6">{children}</main>
+      <head />
+      <body style={{ margin: 0, padding: 0 }}>
+        {children}
       </body>
     </html>
   );
 }
+

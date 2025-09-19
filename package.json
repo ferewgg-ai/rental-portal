@@ -34,5 +34,8 @@
                         "app/**/page.@(tsx|jsx|js)":  [
                                                           "eslint --max-warnings=0 --fix"
                                                       ]
-                    }
+                    },
+    "engines":  {
+                    "node":  "20.x"
+                }
 }

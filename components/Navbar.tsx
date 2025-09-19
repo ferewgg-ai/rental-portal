@@ -1,40 +1,26 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/rent", label: "Pay Rent" },
-  { href: "/lease", label: "Lease" },
-  { href: "/maintenance", label: "Maintenance" },
-  { href: "/contact", label: "Contact" },
-  { href: "/profile", label: "Profile" },
-  { href: "/login", label: "Login" },
-  { href: "/admin", label: "Admin" },
-];
 
 export default function Navbar() {
-  const pathname = usePathname();
-
   return (
-    <nav className="bg-neutral-900 border-b border-neutral-700 text-neutral-100">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-sky-400">🏠 Rental Portal</h1>
-        <div className="flex gap-4">
-          {links.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition ${
-                pathname === href
-                  ? "bg-sky-600 text-white"
-                  : "hover:bg-neutral-800 text-neutral-300"
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
+    <nav className="w-full bg-gray-900 text-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo / Title */}
+          <div className="flex-shrink-0 text-xl font-bold">
+            Rental Portal
+          </div>
+
+          {/* Links */}
+          <div className="hidden md:flex space-x-6">
+            <Link href="/" className="hover:text-pink-400">Home</Link>
+            <Link href="/rent" className="hover:text-pink-400">Pay Rent</Link>
+            <Link href="/lease" className="hover:text-pink-400">Lease</Link>
+            <Link href="/maintenance" className="hover:text-pink-400">Maintenance</Link>
+            <Link href="/contact" className="hover:text-pink-400">Contact</Link>
+            <Link href="/login" className="hover:text-pink-400">Login</Link>
+          </div>
         </div>
       </div>
     </nav>

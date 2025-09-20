@@ -1,0 +1,9 @@
+﻿/* Global styles. If Tailwind is installed, the @tailwind directives below will work. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles can go here */
+html, body {
+  min-height: 100%;
+}
